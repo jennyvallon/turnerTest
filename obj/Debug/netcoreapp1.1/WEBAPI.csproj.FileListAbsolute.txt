@@ -1,0 +1,8 @@
+/Users/jennyvallon/NetBeansProjects/WEBAPI/bin/Debug/netcoreapp1.1/WEBAPI.deps.json
+/Users/jennyvallon/NetBeansProjects/WEBAPI/bin/Debug/netcoreapp1.1/WEBAPI.runtimeconfig.json
+/Users/jennyvallon/NetBeansProjects/WEBAPI/bin/Debug/netcoreapp1.1/WEBAPI.runtimeconfig.dev.json
+/Users/jennyvallon/NetBeansProjects/WEBAPI/bin/Debug/netcoreapp1.1/WEBAPI.dll
+/Users/jennyvallon/NetBeansProjects/WEBAPI/bin/Debug/netcoreapp1.1/WEBAPI.pdb
+/Users/jennyvallon/NetBeansProjects/WEBAPI/obj/Debug/netcoreapp1.1/WEBAPI.AssemblyInfo.cs
+/Users/jennyvallon/NetBeansProjects/WEBAPI/obj/Debug/netcoreapp1.1/WEBAPI.dll
+/Users/jennyvallon/NetBeansProjects/WEBAPI/obj/Debug/netcoreapp1.1/WEBAPI.pdb
