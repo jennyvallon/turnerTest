@@ -1,0 +1,45 @@
+
+
+form{
+    position:absolute;
+    top: 50%;
+    transform:translateY(-50%);
+}
+
+form > label{
+    display: block;
+    float: left;
+    padding-top: 1px;
+    font-size: 220%;
+}
+
+form > input{
+    float:left; 
+    box-sizing: border-box;
+    height: 42px;
+    width: 586px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px 5px;
+    margin: 0 0 0 30px;
+    font-size: 130%;
+    padding-left: 10px;
+    box-shadow: 0px 1px 2px #c2c2c2;
+    outline:none!important;
+}
+
+form > input:focus, form > input:hover{
+    box-shadow: 2px 3px 4px #c2c2c2;
+}
+
+
+form > button{
+    background-color: transparent;
+    border:none;
+    position: absolute;
+    top: 5px;
+    right:5px;    
+}
+
+form > button > img{
+    height: 30px;
+}

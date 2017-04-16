@@ -10,14 +10,15 @@ import { ResultsComponent }                     from './results.component';
 
 
 @Component({
-  selector: 'app-root',
-  template: '<search-form '+
+    selector: 'app-root',
+    template: '<search-form '+
                 '(error)="onError($event)" '+
                 '(results)="onResults($event)" '+
                 '(searchTerm)="onSearch($event)"> '+        
             '</search-form>'+
             '<error-message *ngIf="error" [errorMessage] ></error-message>'+
-            '<search-results *ngIf="results" [titles]="titles" [searchParam]="searchParam"></search-results>'//only populate after a response from the server
+            '<search-results *ngIf="results" [titles]="titles" [searchParam]="searchParam"></search-results>',//only populate after a response from the server
+    styleUrls:['./../styles/root.style.css']
 })
 
 

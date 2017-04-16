@@ -7,19 +7,16 @@ import { Title }                                from '../classes/title';
     template: 
             //If there are no results
             '<ng-container *ngIf="titles.length==0;">'+
-                '<p class="srchResults-summary">There are no results for {{searchParam}}</p>'+
+                '<p class="result-summary">There are no results for {{searchParam}}</p>'+
             '</ng-container>'+
             
             //If there is at least one result
             '<ng-container *ngIf="titles.length>0;">'+
-                '<p *ngIf="titles.length==1;" class="srchResults-summary">There is {{titles.length}} result for "{{searchParam}}".</p>'+
-                '<p *ngIf="titles.length>1;" class="srchResults-summary">There are {{titles.length}} results for "{{searchParam}}".</p>'+
-                '<ul>'+
-                    '<li *ngFor="let title of titles">'+
-                        '<a-title [title]="title"></a-title>'+
-                    '</li>'+
-                '</ul>'+
-            '</ng-container>'    
+                '<p *ngIf="titles.length==1;" class="result-summary">There is {{titles.length}} result for "{{searchParam}}".</p>'+
+                '<p *ngIf="titles.length>1;" class="result-summary">There are {{titles.length}} results for "{{searchParam}}".</p>'+
+                '<a-title *ngFor="let title of titles" [title]="title"></a-title>'+
+            '</ng-container>',
+    styleUrls:['./../styles/results.style.css']
 })
 
 

@@ -1,0 +1,21 @@
+search-form,
+error-message,
+search-results{
+    display:block;
+}
+
+search-form{
+    background-color: #fafafa;
+    height: 85px;
+    border-bottom: 1px solid #ebebeb;
+    padding-left: 20px;
+    padding-right:20px;
+    position: relative; 
+}
+
+search-results{
+    width: 580px;
+    padding-left:160px;
+    font-family: "RobotoRegular"; 
+}
+

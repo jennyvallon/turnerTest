@@ -17,8 +17,11 @@ import { Title }                                from '../classes/title';
                 '<label>Google</label>'+
                 '<input type="text" name=userInput '+
                 '(ngModel)="model.searchTerm">'+ 
-                '<button type="submit">Search</button>'+
-            '</form>'
+                '<button type="submit">'+
+                    '<img src="../assets/search.png">'+
+                '</button>'+
+            '</form>',
+    styleUrls:['./../styles/search.style.css']
 })
 
 

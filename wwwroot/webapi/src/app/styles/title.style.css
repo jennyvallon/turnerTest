@@ -1,0 +1,51 @@
+p{
+    margin:0;
+}
+
+p.title{
+    font-size: 130%; 
+    line-height: 145%;
+}
+
+p.title-meta {
+    line-height: 120%;
+}
+
+p.title-meta > span{
+    color:#006621;
+}
+
+p.title-meta > span.genre:not(:last-child)::after, 
+p.title-meta > span.participants:not(:last-child)::after{
+    content:", ";
+}
+
+p.title-meta > span.participants:first-child:before{
+    content: "Cast: ";
+}
+
+p.title-storylines{
+    margin:0;
+}
+
+p.title-storylines > p.storyline{
+    margin-bottom: 5px;
+}
+
+p.title-storylines > p.storyline.ellipses{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0!important;
+}
+
+
+p.title-storylines > p.storyline > 
+span.storyline-type{
+    font-family: "RobotoMedium";
+    color:#1a0dab;
+    cursor:pointer;
+    cursor:hand;
+}
+

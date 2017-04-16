@@ -5,32 +5,33 @@ import { Title }                                from '../classes/title';
 @Component({
     selector: 'a-title',
     template:
-            '<p>{{title?.TitleName}}</p>'+
+            '<p class="title">{{title?.TitleName}}</p>'+ 
              
             //releaseYear+Genres 
-            '<p> '+ 
-                '<span>{{title?.ReleaseYear}}</span>'+ 
+            '<p class="title-meta"> '+ 
+                '<span class="year">Year: {{title?.ReleaseYear}}  -  Genres: </span>'+ 
                 '<ng-container *ngFor="let genre of title?.Genres">'+
-                    '<span>{{genre}}</span> '+
-                '</ng-container>'+ 
+                    '<span class="genre">{{genre}}</span> '+
+                '</ng-container>'+  
             '</p> '+
             
             //participants
             '<p> '+
                 '<ng-container *ngFor="let participant of title?.Participants">'+
-                    '<span *ngIf="participant.IsKey===true">{{genre}}</span> '+
+                    '<span class="participants" *ngIf="participant.IsKey===true">{{genre}}</span> '+
                 '</ng-container>'+
             '</p> '+
             
             //storylines
-            '<p class="title-storyLines">'+
+            '<p class="title-storylines">'+
                 '<ng-container *ngFor="let storyline of title?.Storylines">'+
-                    '<p class="title-storyLine">'+
-                        '<span class="title-storyline-type">{{storyline.Type}}</span>'+
-                        '<span class="title-storyline-type">{{storyline.Description}}</span>'+
+                    '<p class="storyline ellipses">'+
+                        '<span class="storyline-type">{{storyline.Type}} - </span>'+
+                        '<span class="storyline-description">{{storyline.Description}}</span>'+
                     '</p>'+
                 '</ng-container>'+
-            '</p>' 
+            '</p>',
+    styleUrls:['./../styles/title.style.css']
 })
 
 
