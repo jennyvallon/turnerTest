@@ -11,9 +11,7 @@ import { RootComponent }                from './components/root.component';
 import { SearchComponent }              from './components/search.component';
 import { TitleComponent }               from './components/title.component';
 import { ResultsComponent }             from './components/results.component';
-//import { GenresComponent }              from './components/genres.component';
-//import { ParticipantsComponent }        from './components/participants.component';
-//import { StorylinesComponent }          from './components/storylines.component';
+
 
 
 //Services
@@ -23,9 +21,6 @@ import { TitleService }                 from './services/title.service';
 
 @NgModule({
   declarations: [
-//    ParticipantsComponent,
-//    StorylinesComponent,
-//    GenresComponent,
     ResultsComponent,
     TitleComponent,
     SearchComponent, 
