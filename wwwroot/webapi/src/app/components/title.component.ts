@@ -37,19 +37,11 @@ import { Title }                                from '../classes/title';
 export class TitleComponent implements OnInit {
     private _title:Title;
     
-    @Input()
+    @Input() 
     set title(title:Title) { this._title = title; }
     get title():Title { return this._title; }
     
+    constructor(){ }
     
-    
- 
-    constructor(){
-    }
-    
-    ngOnInit(){ 
-        console.log('\n TitleComponent OnInit');
-        console.log('The below value should be a reference of title');
-        console.log(this.title);
-    }
+    ngOnInit(){ }
 }

@@ -30,10 +30,5 @@ export class ResultsComponent implements OnInit {
     
     constructor(){}
     
-    ngOnInit(){ 
-        console.log("\n ResultsComponent OnInit");
-        console.log('the below values should be of the titles and search param')
-        console.log(this.titles);
-        console.log(this.searchParam);
-    }
+    ngOnInit(){ }
 }
