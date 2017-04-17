@@ -1,32 +1,22 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
- 
 using Content.Models;
-using MongoDB.Bson;
+using Content.Services;
+
  
 namespace Content.Controllers
 {
     [Route("api/Content")]
     public class ContentController : Controller
     {
-        private readonly ContentAccess contentaccess;
- 
-        public ContentController(ContentAccess _contentaccess)
-        {
-            contentaccess=_contentaccess;
+        [HttpGet]
+        public async Task<JsonResult> Get(){
+            var dbService= new MongoDbService("dev-challenge", "Titles", "mongodb://readonly:turner@ds043348.mongolab.com:43348/dev-challenge");
+            var allContent= await dbService.GetContent();
+            return Json(allContent);
         }
- 
-        
-        [HttpGet("{title}")]
-        public IActionResult Get(string title)
-        {
-            var content = contentaccess.GetContent(title);
-            if (content == null)
-            {
-                return NotFound();
-            }
-            return new ObjectResult(content);
-        }
-
     }
 }

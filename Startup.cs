@@ -29,13 +29,8 @@ namespace Content
         
         public void ConfigureServices(IServiceCollection services)
         {
-            
-            services.AddTransient<ContentAccess>();
-
             services.AddMvc();
             
-            services.AddScoped<IContentAccess, ContentAccess>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,7 +39,7 @@ namespace Content
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            app.UseMvc();
+            app.UseMvcWithDefaultRoute();
         }
     }
 }
