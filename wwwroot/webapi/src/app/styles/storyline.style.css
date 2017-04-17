@@ -1,0 +1,26 @@
+p.title-storylines{
+    margin:0;
+}
+
+p.storyline{
+    margin-bottom: 5px;
+}
+
+p.storyline.ellipses{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top:0;
+    margin-bottom: 0!important;
+}
+
+
+
+span.storyline-type{
+    font-family: "RobotoMedium";
+    color:#1a0dab;
+    cursor:pointer;
+    cursor:hand;
+}
+

@@ -11,6 +11,7 @@ import { RootComponent }                from './components/root.component';
 import { SearchComponent }              from './components/search.component';
 import { TitleComponent }               from './components/title.component';
 import { ResultsComponent }             from './components/results.component';
+import { StorylineComponent }           from './components/storyline.component';
 
 
 
@@ -18,9 +19,12 @@ import { ResultsComponent }             from './components/results.component';
 import { ErrorService }                 from './services/error.service';
 import { TitleService }                 from './services/title.service';
 
+import { InfiniteScrollModule }         from 'ngx-infinite-scroll';
+
 
 @NgModule({
   declarations: [
+    StorylineComponent,
     ResultsComponent,
     TitleComponent,
     SearchComponent, 
@@ -28,6 +32,7 @@ import { TitleService }                 from './services/title.service';
   ],
   imports: [
     BrowserModule,
+    InfiniteScrollModule,
     FormsModule,
     HttpModule
   ],

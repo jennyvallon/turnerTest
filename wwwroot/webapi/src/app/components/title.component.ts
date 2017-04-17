@@ -25,10 +25,7 @@ import { Title }                                from '../classes/title';
             //storylines
             '<p class="title-storylines">'+
                 '<ng-container *ngFor="let storyline of title?.Storylines">'+
-                    '<p class="storyline ellipses">'+
-                        '<span class="storyline-type">{{storyline.Type}} - </span>'+
-                        '<span class="storyline-description">{{storyline.Description}}</span>'+
-                    '</p>'+
+                    '<a-storyline [storyline]="storyline"></a-storyline>'+
                 '</ng-container>'+
             '</p>',
     styleUrls:['./../styles/title.style.css']
@@ -36,6 +33,8 @@ import { Title }                                from '../classes/title';
 
 
 export class TitleComponent implements OnInit {
+    isClicked=false;
+    
     private _title:Title;
     
     @Input() 
@@ -45,4 +44,9 @@ export class TitleComponent implements OnInit {
     constructor(){ }
     
     ngOnInit(){ }
+    
+    toggle(){
+        console.log(this.isClicked);
+        this.isClicked=!this.isClicked;
+    }
 }
