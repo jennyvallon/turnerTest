@@ -13,11 +13,11 @@ import { Title }                                from '../classes/title';
 @Component({
     selector: 'search-form',
     template: 
-            '<form #f="ngForm" (ngSubmit)="onSubmit(f)">'+
+            '<form #f="ngForm">'+
                 '<label>Google</label>'+
                 '<input type="text" name=userInput '+
                 '(ngModel)="model.searchTerm">'+ 
-                '<button type="submit">'+
+                '<button (click)="onSubmit(f)">'+
                     '<img src="../assets/search.png">'+
                 '</button>'+
             '</form>',
@@ -54,19 +54,15 @@ export class SearchComponent implements OnInit {
 
     onSubmit(f:NgForm){
         this.assign(f);
-        console.log("\n onSubmit()");
-        console.log(f.form.value.userInput + " should equal what was in the log box");
-        console.log(this.userInput + " should equal the value above it");
-        this.getResults();  
+        this.getResults(this.userInput);  
         this.searchTerm.emit(this.userInput);
-        f.reset();
+//        f.reset();
     }
     
     //get info from service
-    getResults(){
-        var results=this.titleService.getTitles();
-        console.log("\n getResults()");
-        console.log("the below value should be dummy results")
+    getResults(param){
+        var results=this.titleService.getTitles(param);
+        console.log("results");
         console.log(results);
         this.sendResults(results);
     }
@@ -76,9 +72,6 @@ export class SearchComponent implements OnInit {
     //fire emit event
     sendResults(response:Title[]){
         this.titles=response;
-        console.log("\n sendResults()");
-        console.log("The below value should match value above");
-        console.log(this.titles);
         this.results.emit(response);
 //        this.searchTerm.emit(this.userInput);
     }
